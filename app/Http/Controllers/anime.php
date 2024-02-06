@@ -30,4 +30,8 @@ class anime extends Controller
         
         return view('club', compact('anime'));
     }
+
+    public function testApi(){
+        return view('articoli');
+    }
 }
