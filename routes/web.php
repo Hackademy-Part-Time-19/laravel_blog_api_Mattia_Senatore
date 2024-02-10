@@ -4,6 +4,7 @@ use App\Http\Controllers\anime;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Apicontroller;
 use App\Http\Controllers\ProfileController;
+use App\Models\Article;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::get('/{genre}', [anime::class,'bygenre'])->name('generi');
 Route::get('/club/{id}',[anime::class,'club'])->name('clubs');
 
 Route::get('/articoli',[anime::class,'testApi'])->name('api.articles');
+
+Route::get('/inserisci',[Article::class,'saveToDatabes'])->name('insert');
